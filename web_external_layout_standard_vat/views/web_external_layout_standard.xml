@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="external_layout_standard"
+        inherit_id="web.external_layout_standard"
+    >
+        <div t-field="company.partner_id" position="after">
+            <div t-field="company.vat"/> 
+        </div>
+        <!-- TODO better replacement -->
+        <li t-if="company.vat" position="attributes">
+            <attribute name="t-if">False</attribute>
+        </li>
+    </template>
+</odoo>
